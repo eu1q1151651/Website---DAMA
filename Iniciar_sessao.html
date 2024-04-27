@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link href="css/iniciar_sessão.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2> <i>Iniciar Sessão</i></h2>
+<h3>Preenche todos os requesitos, abaixo mostrados</h3>
+
+<div class="container">
+  <form action="/Website - D.A.M.A/d.a.m.a.html">
+    <label for="usrname">Username</label>
+    <input type="text" id="usrname" name="usrname" required>
+
+    <label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <input type="checkbox" id="checkbox" onclick="myFunction()">
+
+    <input  type="submit" value="Iniciar Sessão">
+   
+
+  </form>
+</div>
+
+<div id="message">
+        <h3>A senha deve conter o seguinte:</h3>
+        <p id="letter" class="invalid"><b>Letra Minúscula</b></p>
+        <p id="capital" class="invalid"><b>Letra Maiúscula</b></p>
+        <p id="number" class="invalid"><b>Números</b></p>
+        <p id="length" class="invalid"><b>Minímo 8 characters</b></p>
+</div>
+<script type="text/javascript" src="JS/Iniciar_sessao.js"> </script>				
+
+</body>
+</html>

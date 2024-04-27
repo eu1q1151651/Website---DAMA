@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Concertos</title>
+        <meta charset="UTF-8" >
+        <meta name="Descrição" content="">
+        <meta name="Autor" content="Tomás">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="Css/concertos.css">
+        <link rel="stylesheet" href="d.a.m.a.html">
+        
+    </head>
+    <style>
+        /* {} */
+    </style>
+    <body>
+        <header>
+            <img src="img/dama_2.jpg" id="img_DM" alt="img"/>
+        </header>
+        <nav>
+            <ul>
+                
+                <li><a href="d.a.m.a.html"><i>INÍCIO</i></a></li>
+                <li><a href="SOBRE_.html"><i>D.Δ.M.Δ</i></a></li>
+                <li><a href="Contato.html"><i>CONTATO</i></a></li>
+                <li><a href="Bilheteira.html"><i>BILHETEIRA</i></a></li>
+                <li><a href="concertos.html"><i>CONCERTOS</i></a></li>
+                <li><div class="dropdown">
+                    <button class="dropbtn"><i>ÁLBUNS</i>
+                      <i class="fa fa-caret-down" id="drpdwn_1"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Album.html"><i>Loucamente</i></a>
+                        <a href="Album_2.html"><i>Casa</i></a>
+                    </div>
+                  </div></li> 
+            </ul>
+        </nav>
+        <arcicle>
+            <h2 class="nomepagina">Mantém-te atualizado á Agenda de Concertos 2024</h2>
+        </arcicle>
+        <br>
+        <div class="container">
+            <input class="form-control" type="text" name="search" id="Pesquisar" placeholder="Pesquisar">
+            <table style="width:50%" class="table table-bordered table-striped">
+              <thead>
+                <tr> 
+                  <th>Localidade</th>
+                  <th>Data dos Concertos</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr id="Concerto_1">
+                    <th>Vilar Formoso</th>
+                    <th>03-02-2024</th>
+                  </tr>
+                  <tr id="Concerto_2">
+                      <th>Rates</th>
+                      <th>15-06-2024</th>
+                  </tr>
+                  <tr id="Concerto_2">
+                      <th>Caíde de Rei, Lousada</th>
+                      <th>30-06-2024</th>
+                  </tr>
+                  <tr id="Concerto_2">
+                      <th>Madalena</th>
+                      <th>20-07-2024</th>
+                  </tr>
+                  <tr id="Concerto_2">
+                      <th>Lagoa</th>
+                      <th>18-08-2024</th>
+                  </tr>
+                  <tr id="Concerto_2">
+                    <th>Portimão</th>
+                    <th>30-09-2024</th>
+                </tr>
+                <tr id="Concerto_2">
+                    <th>Tavira</th>
+                    <th>04-12-2024</th>
+                </tr>
+                <tr id="Concerto_2">
+                    <th>Albufeira</th>
+                    <th>10-01-2025</th>
+                </tr>
+                <tr id="Concerto_2">
+                    <th>Vila Real de Santo António</th>
+                    <th>07-02-2025</th>
+                </tr>
+                <tr id="Concerto_2">
+                    <th>Vila do Bispo</th>
+                    <th>18-03-2025</th>
+                </tr>
+                <tr id="Concerto_2">
+                    <th>Lagos</th>
+                    <th>25-04-2025</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <script>
+          $(document).ready(function(){
+            $("#Pesquisar").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+    </body>
+</html>
